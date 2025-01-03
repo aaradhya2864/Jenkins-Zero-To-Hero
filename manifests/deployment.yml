@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aaradhyajenkinszerotohero 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aaradhyajenkinszerotohero
+  template:
+    metadata:
+      labels:
+        app: aaradhyajenkinszerotohero 
+    spec:
+      containers:
+        - name: aaradhyajenkinszerotohero 
+          image: azcontaineranandregistry.azurecr.io/aaradhyajenkinszerotohero
+          ports:
+          - containerPort: 80
